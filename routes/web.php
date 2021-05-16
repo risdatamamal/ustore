@@ -12,15 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/debug-sentry', function () {
-    throw new Exception('My first Sentry error!');
-});
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/categories', 'CategoryController@index')->name('categories');
+Route::get('/details/{id}', 'DetailController@index')->name('detail');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
