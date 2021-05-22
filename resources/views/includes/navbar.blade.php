@@ -2,7 +2,7 @@
     <div class="container">
       <!-- Logo -->
       <a href="{{ route('home') }}" class="navbar-brand">
-        <img src="/images/Vector.svg" alt="logo" />
+        <img src="/images/logo.svg" alt="logo" />
       </a>
 
       <!-- Membuat menu burger saat layarnya kecil -->
@@ -26,7 +26,7 @@
             <a href="register.html" class="nav-link">Sign up</a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="btn btn-success nav-link px-4 text-white">Sign in</a>
+            <a href="{{ route('login') }}" class="btn btn-primary nav-link px-4 text-white">Sign in</a>
           </li>
         </ul>
       </div>
