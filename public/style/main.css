@@ -10959,14 +10959,137 @@ footer p {
   font-weight: normal;
   font-size: 16px;
   line-height: 180%;
-  margin-bottom: 20px;
   color: #525252;
+  margin-bottom: 20px;
 }
 
 .page-details .store-review .media-body h5 {
   font-weight: 500;
   font-size: 16px;
   color: #0c0d36;
+}
+
+.store-cart h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0c0d36;
+  margin-top: 18px;
+}
+
+.store-cart .product-title {
+  font-size: 18px;
+  color: #0c0d36;
+  margin-top: 15px;
+}
+
+.store-cart .product-subtitle {
+  font-size: 14px;
+  color: #979797;
+}
+
+.store-cart .table-cart {
+  margin-left: -13px;
+  margin-right: -13px;
+}
+
+.store-cart .table-cart th {
+  font-weight: 200;
+}
+
+.store-cart .table-cart .cart-image {
+  border-radius: 10px;
+  max-height: 85px;
+}
+
+.store-cart .table-cart .btn-remove-cart {
+  margin-top: 18px;
+  color: #fff;
+  background-color: #fc5e84;
+  border-color: transparent;
+}
+
+.store-cart .table-cart .btn-remove-cart:hover {
+  color: #fff;
+  background-color: #fb3867;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.store-cart .table-cart .btn-remove-cart:focus, .store-cart .table-cart .btn-remove-cart.focus {
+  color: #fff;
+  background-color: #fb3867;
+  border-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.store-cart .table-cart .btn-remove-cart.disabled, .store-cart .table-cart .btn-remove-cart:disabled {
+  color: #fff;
+  background-color: #fc5e84;
+  border-color: transparent;
+}
+
+.store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled):active, .store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled).active,
+.show > .store-cart .table-cart .btn-remove-cart.dropdown-toggle {
+  color: #fff;
+  background-color: #fb2c5e;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled):active:focus, .store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled).active:focus,
+.show > .store-cart .table-cart .btn-remove-cart.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+}
+
+.page-success .row-login {
+  min-height: 75vh;
+}
+
+.page-success .section-success h2 {
+  font-size: 28px;
+  font-weight: 200;
+  color: #0c0d36;
+  margin-top: 0;
+}
+
+.page-success .section-success .btn-signup {
+  color: #212529;
+  background-color: #f3f3f3;
+  border-color: transparent;
+  color: #bbbbbb;
+}
+
+.page-success .section-success .btn-signup:hover {
+  color: #212529;
+  background-color: #e0e0e0;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.page-success .section-success .btn-signup:focus, .page-success .section-success .btn-signup.focus {
+  color: #212529;
+  background-color: #e0e0e0;
+  border-color: rgba(0, 0, 0, 0);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+
+.page-success .section-success .btn-signup.disabled, .page-success .section-success .btn-signup:disabled {
+  color: #212529;
+  background-color: #f3f3f3;
+  border-color: transparent;
+}
+
+.page-success .section-success .btn-signup:not(:disabled):not(.disabled):active, .page-success .section-success .btn-signup:not(:disabled):not(.disabled).active,
+.show > .page-success .section-success .btn-signup.dropdown-toggle {
+  color: #212529;
+  background-color: #dadada;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.page-success .section-success .btn-signup:not(:disabled):not(.disabled):active:focus, .page-success .section-success .btn-signup:not(:disabled):not(.disabled).active:focus,
+.show > .page-success .section-success .btn-signup.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
 }
 
 .component-categories {

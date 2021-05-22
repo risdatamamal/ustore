@@ -184,6 +184,6 @@
           </div>
         </section>
         <!-- New Products End -->
-      </div>
-      <!-- Page Content End -->
+    </div>
+    <!-- Page Content End -->
 @endsection

@@ -13,14 +13,14 @@
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
+          <li class="nav-item">
             <a href="{{ route('home') }}" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="{{ route('categories') }}" class="nav-link">Categories</a>
+            <a href="#" class="nav-link">Sale</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Points</a>
+            <a href="{{ route('categories') }}" class="nav-link">Categories</a>
           </li>
           <li class="nav-item">
             <a href="register.html" class="nav-link">Sign up</a>

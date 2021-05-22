@@ -13,9 +13,12 @@
           <div class="container">
             <div class="row align-items-center row-login justify-content-center">
               <div class="col-lg-6 text-center">
-                <img src="/images/success.svg" alt="" class="mb-4" />
-                <h2>Transaction processed</h2>
-                <p>Silahkan tunggu konfirmasi email dari kami dan kami akan menginformasikan resi secepat mungkin!</p>
+                <img src="/images/profile_success.svg" alt="" class="mb-4" />
+                <h2>Welcome to UStore</h2>
+                <p>
+                    Kamu sudah berhasil terdaftar <br />
+                    bersama kami. Let's grow up now.
+                </p>
                 <div>
                   <a href="/dashboard.html" class="btn btn-success w-50 mt-4">My Dashboard</a>
                   <a href="{{ route('home') }}" class="btn btn-signup w-50 mt-2">Go To Shopping</a>
