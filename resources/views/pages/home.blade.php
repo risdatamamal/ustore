@@ -16,17 +16,13 @@
                   <ol class="carousel-indicators">
                     <li class="active" data-target="#storeCarousel" data-slide-to="0"></li>
                     <li data-target="#storeCarousel" data-slide-to="1"></li>
-                    <li data-target="#storeCarousel" data-slide-to="2"></li>
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="/images/image 4.jpg" alt="Carousel Image" class="d-block w-100" />
+                      <img src="/images/banner-1.jpg" alt="Carousel Image" class="d-block w-100" />
                     </div>
                     <div class="carousel-item">
-                      <img src="/images/keren.png" alt="Carousel Image" class="d-block w-100" />
-                    </div>
-                    <div class="carousel-item">
-                      <img src="/images/gambar dana.jpeg" alt="Carousel Image" class="d-block w-100" />
+                      <img src="/images/banner.jpg" alt="Carousel Image" class="d-block w-100" />
                     </div>
                   </div>
                 </div>
