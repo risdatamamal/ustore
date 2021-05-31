@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-     <!-- Page Content -->
+    <!-- Page Content -->
     <!-- Carousel -->
     <div class="page-content page-home">
         <section class="store-carousel">

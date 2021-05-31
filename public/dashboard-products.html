@@ -6,13 +6,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>@yield('title')</title>
+    <title>Billionaire</title>
 
-    @stack('prepend-style')
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="style/main.css" rel="stylesheet" />
-    @stack('addon-style')
-
   </head>
 
   <body>
@@ -25,8 +22,8 @@
             <img src="/images/dashboard-store-logo.png" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
-            <a href="/dashboard.html" class="list-group-item list-group-item-action active">Dashboard</a>
-            <a href="/dashboard-products.html" class="list-group-item list-group-item-action">My Products</a>
+            <a href="/dashboard.html" class="list-group-item list-group-item-action">Dashboard</a>
+            <a href="/dashboard-products.html" class="list-group-item list-group-item-action active">My Products</a>
             <a href="/dashboard-transactions.html" class="list-group-item list-group-item-action">Transactions</a>
             <a href="/dashboard-settings.html" class="list-group-item list-group-item-action">Store Settings</a>
             <a href="/dashboard-account.html" class="list-group-item list-group-item-action">My Account</a>
@@ -85,15 +82,76 @@
           </nav>
           <!-- Page Content End -->
 
-          {{-- Content --}}
-          @yield('content')
-
+          <!-- Section Content -->
+          <div class="section-content section-dashboard-home" data-aos="fade-up">
+            <div class="container-fluid">
+              <div class="dashboard-heading">
+                <h2 class="dashboard-title">My Product</h2>
+                <p class="dashboard-subtitle">Manage it well and get money</p>
+              </div>
+              <div class="dashboard-content">
+                <!-- Button -->
+                <div class="row">
+                  <div class="col-12">
+                    <a href="/dashboard-products-create" class="btn btn-success">Add new product</a>
+                  </div>
+                </div>
+                <!-- Content -->
+                <div class="row mt-4">
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="/dashboard-products.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="/images/product-card-1.png" alt="" class="w-100 mb-2" />
+                        <div class="product-title">Monkey Toys</div>
+                        <div class="product-category">Baby</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="/dashboard-products.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="/images/product-card-1.png" alt="" class="w-100 mb-2" />
+                        <div class="product-title">Monkey Toys</div>
+                        <div class="product-category">Baby</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="/dashboard-products.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="/images/product-card-1.png" alt="" class="w-100 mb-2" />
+                        <div class="product-title">Monkey Toys</div>
+                        <div class="product-category">Baby</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="/dashboard-products.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="/images/product-card-1.png" alt="" class="w-100 mb-2" />
+                        <div class="product-title">Monkey Toys</div>
+                        <div class="product-category">Baby</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <a href="/dashboard-products.html" class="card card-dashboard-product d-block">
+                      <div class="card-body">
+                        <img src="/images/product-card-1.png" alt="" class="w-100 mb-2" />
+                        <div class="product-title">Monkey Toys</div>
+                        <div class="product-category">Baby</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    @stack('prepend-script')
     <script src="/vendor/jquery/jquery.slim.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -106,6 +164,5 @@
         $("#wrapper").toggleClass("toggled");
       });
     </script>
-    @stack('addon-script')
   </body>
 </html>

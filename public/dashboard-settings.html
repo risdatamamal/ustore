@@ -6,13 +6,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>@yield('title')</title>
+    <title>Billionaire</title>
 
-    @stack('prepend-style')
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="style/main.css" rel="stylesheet" />
-    @stack('addon-style')
-
   </head>
 
   <body>
@@ -25,10 +22,10 @@
             <img src="/images/dashboard-store-logo.png" alt="" class="my-4" />
           </div>
           <div class="list-group list-group-flush">
-            <a href="/dashboard.html" class="list-group-item list-group-item-action active">Dashboard</a>
+            <a href="/dashboard.html" class="list-group-item list-group-item-action">Dashboard</a>
             <a href="/dashboard-products.html" class="list-group-item list-group-item-action">My Products</a>
             <a href="/dashboard-transactions.html" class="list-group-item list-group-item-action">Transactions</a>
-            <a href="/dashboard-settings.html" class="list-group-item list-group-item-action">Store Settings</a>
+            <a href="/dashboard-settings.html" class="list-group-item list-group-item-action active">Store Settings</a>
             <a href="/dashboard-account.html" class="list-group-item list-group-item-action">My Account</a>
             <a href="/index.html" class="list-group-item list-group-item-action">Sign Out</a>
           </div>
@@ -85,15 +82,68 @@
           </nav>
           <!-- Page Content End -->
 
-          {{-- Content --}}
-          @yield('content')
-
+          <!-- Section Content -->
+          <div class="section-content section-dashboard-home" data-aos="fade-up">
+            <div class="container-fluid">
+              <div class="dashboard-heading">
+                <h2 class="dashboard-title">Store Settings</h2>
+                <p class="dashboard-subtitle">Make store that profitable</p>
+              </div>
+              <div class="dashboard-content">
+                <div class="row">
+                  <div class="col-12">
+                    <form action="">
+                      <div class="card">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Nama toko</label>
+                                <input type="text" class="form-control" />
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Kategori</label>
+                                <select name="category" class="form-control">
+                                  <option value="" disabled>Select Category</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Store</label>
+                                <p class="text-muted">Apakah anda juga ingin membuka toko?</p>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                  <input type="radio" class="custom-control-input" name="is_store_open" id="openStoreTrue" value="true" />
+                                  <label for="openStoreTrue" class="custom-control-label">Buka</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                  <input type="radio" class="custom-control-input" name="is_store_open" id="openStoreFalse" value="false" />
+                                  <label for="openStoreFalse" class="custom-control-label">Sementara tutup</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- Button -->
+                          <div class="row">
+                            <div class="col text-right">
+                              <button type="submit" class="btn btn-success px-5">Save Now</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    @stack('prepend-script')
     <script src="/vendor/jquery/jquery.slim.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -106,6 +156,5 @@
         $("#wrapper").toggleClass("toggled");
       });
     </script>
-    @stack('addon-script')
   </body>
 </html>

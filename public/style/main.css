@@ -2785,21 +2785,20 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #F39189;
-  border-color: #F39189;
-  border-radius: 24px;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #BB8082;
-  border-color: #BB8082;
+  background-color: #0069d9;
+  border-color: #0062cc;
 }
 
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
-  background-color: #BB8082;
-  border-color: #BB8082;
+  background-color: #0069d9;
+  border-color: #0062cc;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
@@ -2827,7 +2826,6 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #6c757d;
   border-color: #6c757d;
-  border-radius: 24px;
 }
 
 .btn-secondary:hover {
@@ -11150,6 +11148,121 @@ footer p {
           box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
 }
 
+.page-dashboard #page-content-wrapper {
+  background: #f5f5fb;
+  min-width: 100vw;
+}
+
+.page-dashboard #sidebar-wrapper {
+  margin-top: 60px;
+  margin-left: -15rem;
+  min-height: 100vh;
+  -webkit-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+.page-dashboard #sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.25rem;
+}
+
+.page-dashboard #sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+.page-dashboard #wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+.page-dashboard .navbar-store {
+  margin-top: 0;
+  background-color: #f5f5fb;
+  -webkit-box-shadow: 0px 4px 5px #cacad1;
+          box-shadow: 0px 4px 5px #cacad1;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard .navbar-store {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.page-dashboard .list-group-item {
+  border: 0;
+  font-size: 16px;
+  color: #c5c5c5;
+}
+
+.page-dashboard .list-group-item.active {
+  background: -webkit-gradient(linear, right top, left top, color-stop(2%, rgba(255, 113, 88, 0.32)), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, rgba(255, 113, 88, 0.32) 2%, rgba(255, 255, 255, 0) 100%);
+  border-right: 4px solid #ff7158;
+  color: #0c0d36;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard #sidebar-wrapper {
+    margin-left: 0;
+    margin-top: 0px;
+  }
+  .page-dashboard #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+  .page-dashboard #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+.page-dashboard .section-content {
+  margin-top: 100px;
+}
+
+@media (min-width: 768px) {
+  .page-dashboard .section-content {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+}
+
+.page-dashboard .section-content h5 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #0c0d36;
+}
+
+.page-dashboard .section-content .dashboard-title {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #0c0d36;
+}
+
+.page-dashboard .section-content .dashboard-subtitle {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9191a9;
+}
+
+.page-dashboard .section-content .nav-pills .nav-link {
+  font-weight: normal;
+  font-size: 18px;
+  color: #9191a9;
+  border-radius: 0px;
+}
+
+.page-dashboard .section-content .nav-pills .nav-link.active {
+  font-weight: 500;
+  font-size: 18px;
+  color: #0c0d36;
+  border-bottom: 2px solid #0c0d36;
+  background: none;
+}
+
 .component-categories {
   background: #f4f4f4;
   border-radius: 8px;
@@ -11238,6 +11351,55 @@ footer p {
 
 .store-breadcrumbs a {
   color: #979797;
+}
+
+.card {
+  background: #fefefe;
+  -webkit-box-shadow: 0px 4px 15px #f1f1f8;
+          box-shadow: 0px 4px 15px #f1f1f8;
+  border-radius: 8px;
+  border: none;
+  text-decoration: none !important;
+}
+
+.card .dashboard-card-title {
+  font-size: 16px;
+  line-height: 24px;
+  color: #c5c5c5;
+}
+
+.card .dashboard-card-subtitle {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  color: #0c0d36;
+}
+
+.card-list {
+  margin-bottom: 10px;
+}
+
+.card-list .card-body {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 40px;
+  color: #0c0d36;
+}
+
+.card-dashboard-product {
+  margin-bottom: 15px;
+}
+
+.card-dashboard-product .card-body .product-title {
+  font-weight: normal;
+  font-size: 18px;
+  color: #0c0d36;
+}
+
+.card-dashboard-product .card-body .product-category {
+  font-weight: normal;
+  font-size: 16px;
+  color: #c5c5c5;
 }
 
 .slide-fade-enter-active {

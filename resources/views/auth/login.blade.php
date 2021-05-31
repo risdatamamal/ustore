@@ -17,14 +17,14 @@
             <form action="" class="mt-3">
               <div class="form-group">
                 <label>Email address</label>
-                <input type="email" class="form-control w-75" />
+                <input type="email" class="form-control w-75" style="border-radius: 24px" />
               </div>
               <div class="form-group">
                 <label>Password</label>
-                <input type="password" class="form-control w-75" />
+                <input type="password" class="form-control w-75" style="border-radius: 24px" />
               </div>
-              <a href="/dashboard.html" class="btn btn-primary btn-block w-75 mt-4">Sign in to my account</a>
-              <a href="/register.html" class="btn btn-secondary btn-block w-75 mt-2">Sign Up</a>
+              <a href="/dashboard.html" class="btn btn-success btn-block w-75 mt-4" style="border-radius: 24px">Sign in to my account</a>
+              <a href="{{ route('register') }}" class="btn btn-signup btn-block w-75 mt-2" style="border-radius: 24px">Sign Up</a>
             </form>
           </div>
         </div>

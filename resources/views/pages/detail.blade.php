@@ -56,10 +56,10 @@
                 <div class="col-lg-8">
                   <h1>Sofa nyaman, senyaman dengannya</h1>
                   <div class="owner">by Markonah</div>
-                  <div class="price">$9999999999</div>
+                  <div class="price">Rp 9999999999</div>
                 </div>
                 <div class="col-lg-2" data-aos="zoom-in">
-                  <a href="/cart.html" class="btn btn-success px-4 text-white btn-block mb-3">Add to cart</a>
+                  <a href="/cart.html" class="btn btn-primary px-4 text-white btn-block mb-3">Add to cart</a>
                 </div>
               </div>
             </div>
