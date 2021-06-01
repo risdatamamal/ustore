@@ -22,10 +22,15 @@ Route::get('/register/success', 'Auth\RegisterController@success')->name('regist
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
+// Dashboard Product
 Route::get('/dashboard/products', 'DashboardProductController@index')->name('dashboard-products');
+Route::get('/dashboard/products/{id}', 'DashboardProductController@detail')->name('dashboard-products-details');
+Route::get('/dashboard/products/create', 'DashboardProductController@create')->name('dashboard-products-create');
 
+// Dashboard Transaction
 Route::get('/dashboard/transactions', 'DashboardTransactionController@index')->name('dashboard-transactions');
 
+// Dashboard Setting
 Route::get('/dashboard/settings', 'DashboardSettingController@store')->name('dashboard-settings-store');
 Route::get('/dashboard/account', 'DashboardSettingController@account')->name('dashboard-settings-account');
 

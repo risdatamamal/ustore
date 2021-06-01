@@ -16,7 +16,7 @@
             <!-- Button -->
             <div class="row">
               <div class="col-12">
-                <a href="/dashboard-products-create" class="btn btn-success">Add new product</a>
+                <a href="{{ route('dashboard-products-create') }}" class="btn btn-success">Add new product</a>
               </div>
             </div>
             <!-- Content -->
