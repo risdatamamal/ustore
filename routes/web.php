@@ -29,9 +29,17 @@ Route::get('/dashboard/products/create', 'DashboardProductController@create')->n
 
 // Dashboard Transaction
 Route::get('/dashboard/transactions', 'DashboardTransactionController@index')->name('dashboard-transactions');
+Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@detail')->name('dashboard-transactions-details');
 
 // Dashboard Setting
 Route::get('/dashboard/settings', 'DashboardSettingController@store')->name('dashboard-settings-store');
 Route::get('/dashboard/account', 'DashboardSettingController@account')->name('dashboard-settings-account');
+
+Route::prefix('admin')
+    ->namespace('Admin')
+    // ->middleware(['auth', 'admin'])
+    ->group(function() {
+        Route::get('/', 'DashboardController@index')->name('admin-dashboard');
+    });
 
 Auth::routes();

@@ -10,4 +10,9 @@ class DashboardTransactionController extends Controller
     {
         return view('pages.dashboard-transactions');
     }
+
+    public function detail()
+    {
+        return view('pages.dashboard-transactions-details');
+    }
 }
