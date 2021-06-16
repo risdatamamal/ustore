@@ -19,20 +19,23 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        if(request()->ajax())
-        {
+        if (request()->ajax()) {
             $query = Category::query();
 
-            return DataTables::of($query)
-                ->addColumn('action', function($item) {
+            return Datatables::of($query)
+                ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toogle mr-1 mb-1" type="button" data-toogle="dropdown">
-                                    Aksi
+                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1"
+                                    type="button" id="action' .  $item->id . '"
+                                        data-toggle="dropdown"
+                                        aria-haspopup="true"
+                                        aria-expanded="false">
+                                        Aksi
                                 </button>
-                                <div class="dropdown-menu">
-                                    <a href="' . route('category.edit', $item->id) . '" class="dropdown-item">
+                                <div class="dropdown-menu" aria-labelledby="action' .  $item->id . '">
+                                    <a class="dropdown-item" href="' . route('category.edit', $item->id) . '">
                                         Sunting
                                     </a>
                                     <form action="' . route('category.destroy', $item->id) . '" method="POST">
@@ -43,14 +46,12 @@ class CategoryController extends Controller
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                    ';
+                    </div>';
                 })
-                ->editColumn('photo', function($item)
-                {
-                    return $item->photo ? '<img src="' . Storage::url($item->photo) .'" style="max-height: 40px;" />' : '';
+                ->editColumn('photo', function ($item) {
+                    return $item->photo ? '<img src="' . Storage::url($item->photo) . '" style="max-height: 40px;"/>' : '';
                 })
-                ->rawColumn(['action', 'photo'])
+                ->rawColumns(['action', 'photo'])
                 ->make();
         }
 
