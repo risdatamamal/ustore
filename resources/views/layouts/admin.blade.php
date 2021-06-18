@@ -27,11 +27,11 @@
             <img src="/images/admin.png" alt="" class="my-4" style="max-width: 150px"/>
           </div>
           <div class="list-group list-group-flush">
-            <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action">Dashboard</a>
+            <a href="{{ route('admin-dashboard') }}" class="list-group-item list-group-item-action {{  (request()->is('admin')) ? 'active' : '' }}">Dashboard</a>
             <a href="#" class="list-group-item list-group-item-action">Products</a>
             <a href="{{ route('category.index') }}" class="list-group-item list-group-item-action {{  (request()->is('admin/category*')) ? 'active' : '' }}">Categories</a>
             <a href="#" class="list-group-item list-group-item-action">Transactions</a>
-            <a href="#" class="list-group-item list-group-item-action">Users</a>
+            <a href="{{ route('user.index') }}" class="list-group-item list-group-item-action {{  (request()->is('admin/user*')) ? 'active' : '' }}">Users</a>
             <a href="#" class="list-group-item list-group-item-action">Sign Out</a>
           </div>
         </div>
@@ -87,7 +87,7 @@
 
     <!-- Bootstrap core JavaScript -->
     @stack('prepend-script')
-    <script src="/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.24/datatables.min.js"></script>

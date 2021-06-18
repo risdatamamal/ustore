@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('title')
-    Category
+    Create User
 @endsection
 
 @section('content')
@@ -9,8 +9,8 @@
     <div class="section-content section-dashboard-home" data-aos="fade-up">
         <div class="container-fluid">
         <div class="dashboard-heading">
-            <h2 class="dashboard-title">Category</h2>
-            <p class="dashboard-subtitle">Create New Category</p>
+            <h2 class="dashboard-title">User</h2>
+            <p class="dashboard-subtitle">Create New User</p>
         </div>
         <div class="dashboard-content">
             <div class="row">
@@ -26,20 +26,35 @@
                     @endif
                     <div class="card">
                         <div class="card-body">
-                            <form action="{{ route('category.store')}}" method="POST" enctype="multipart/form-data">
+                            <form action="{{ route('user.store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Category Name</label>
+                                            <label>User Name</label>
                                             <input type="text" class="form-control" name="name" required />
                                           </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Photo</label>
-                                            <input type="file" name="photo" class="form-control" placeholder="Photo" required />
-                                        </div>
+                                            <label>User Email</label>
+                                            <input type="email" class="form-control" name="email" required />
+                                          </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>User Password</label>
+                                            <input type="password" class="form-control" name="password" required />
+                                          </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Roles</label>
+                                            <select name="roles" required class="form-control">
+                                                <option value="ADMIN">Admin</option>
+                                                <option value="USER">User</option>
+                                            </select>
+                                          </div>
                                     </div>
                                 </div>
                                 <div class="row">

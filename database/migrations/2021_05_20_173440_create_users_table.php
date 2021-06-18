@@ -20,17 +20,17 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
 
-            $table->text('address_one');
-            $table->text('address_two');
+            $table->longText('address_one');
+            $table->longText('address_two');
             $table->integer('provinces_id');
             $table->integer('regencies_id');
             $table->integer('zip_code');
             $table->string('country');
             $table->string('phone_number');
             $table->string('store_name');
-
             $table->integer('categories_id');
             $table->integer('store_status');
+
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();
