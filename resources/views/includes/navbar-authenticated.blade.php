@@ -21,7 +21,7 @@
             <a href="{{ route('categories') }}" class="nav-link">Categories</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Points</a>
+            <a href="#" class="nav-link">Sale</a>
           </li>
         </ul>
 
@@ -30,7 +30,7 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
               <img src="/images/profile.png" alt="" class="rounded-circle mr-2 profile-picture" />
-              Hi, Zody
+              Hi, Atik
             </a>
             <div class="dropdown-menu">
               <a href="/dashboard.html" class="dropdown-item">Dashboard</a>
@@ -50,7 +50,7 @@
         <!-- Mobile -->
         <ul class="navbar-nav d-block d-lg-none">
           <li class="nav-item">
-            <a href="#" class="nav-link"> Hi, Zody </a>
+            <a href="#" class="nav-link"> Hi, Atik </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link d-inline-block"> Cart </a>

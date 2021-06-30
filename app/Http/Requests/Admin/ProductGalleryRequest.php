@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ProductGalleryRequest extends FormRequest
 {
@@ -24,8 +25,10 @@ class ProductGalleryRequest extends FormRequest
     public function rules()
     {
         return [
-            'photos' => 'required|exists:products,id',
-            'products_id' => 'required|image'
+            'products_id' => 'required|exists:products,id',
+            'photos' => 'required|image'
         ];
     }
 }
+
+Storage::url();

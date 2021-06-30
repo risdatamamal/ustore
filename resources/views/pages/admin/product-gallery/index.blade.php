@@ -14,7 +14,7 @@
         <div class="dashboard-heading">
             <h2 class="dashboard-title">Gallery</h2>
             <p class="dashboard-subtitle">
-                List of Gallery
+                List of Product Gallery
             </p>
         </div>
         <div class="dashboard-content">
@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-body">
                             <a href="{{  route('product-gallery.create') }}" class="btn btn-primary mb-3">
-                                + Tambah Gallery Baru
+                                + Tambah Product Gallery Baru
                             </a>
                             <div class="table-responsive">
                                 <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
@@ -61,9 +61,7 @@
             columns: [
                 { data: 'id', name: 'id' },
                 { data: 'product.name', name: 'product.name' },
-                { data: 'user.name', name: 'user.name' },
-                { data: 'category.name', name: 'category.name' },
-                { data: 'price', name: 'price' },
+                { data: 'photos', name: 'photos' },
                 {
                     data: 'action',
                     name: 'action',
