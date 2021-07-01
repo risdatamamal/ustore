@@ -30,5 +30,3 @@ class ProductGalleryRequest extends FormRequest
         ];
     }
 }
-
-Storage::url();

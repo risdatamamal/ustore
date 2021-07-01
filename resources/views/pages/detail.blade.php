@@ -15,7 +15,7 @@
               <div class="col-12">
                 <ol class="breadcrumb">
                   <li class="breadcrumb-item">
-                    <a href="/index.html">Home</a>
+                    <a href="{{ route('home') }}">Home</a>
                   </li>
                   <li class="breadcrumb-item active">Product Details</li>
                 </ol>
@@ -26,7 +26,7 @@
         <!-- Breadcrumb End -->
 
         <!-- Gallery -->
-        <section class="store-gallery" id="gallery">
+        <section class="store-gallery mb-3" id="gallery">
           <div class="container">
             <div class="row">
               <div class="col-lg-8" data-aos="zoom-in">
@@ -54,12 +54,19 @@
             <div class="container">
               <div class="row">
                 <div class="col-lg-8">
-                  <h1>Sofa nyaman, senyaman dengannya</h1>
-                  <div class="owner">by Markonah</div>
-                  <div class="price">Rp 9999999999</div>
+                  <h1>{{  $product->name }}</h1>
+                  <div class="owner">By {{ $product->user->store_name }}</div>
+                  <div class="price">Rp{{ number_format($product->price) }}</div>
                 </div>
                 <div class="col-lg-2" data-aos="zoom-in">
-                  <a href="/cart.html" class="btn btn-primary px-4 text-white btn-block mb-3">Add to cart</a>
+                    @auth
+                        <form action="{{ route('detail-add', $product->id) }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <button type="submit" class="btn btn-success px-4 text-white btn-block mb-3" style="border-radius: 24px">Add to cart</button>
+                        </form>
+                    @else
+                        <a href="{{ route('login') }}" class="btn btn-success px-4 text-white btn-block mb-3" style="border-radius: 24px">Sign in to Add</a>
+                    @endauth
                 </div>
               </div>
             </div>
@@ -71,11 +78,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 col-lg-8">
-                  <p>
-                    sofa ini sangat nyaman sekali apalagi jika duduk berdua dengan doi sambil menikmati film dan cuddle, beuhhh.. rasanya seperti dunia milik berdua dan tidak mau sudahi itu semua, pokonya recommended deh untuk dibeli yuk
-                    dicheckout kaka
-                  </p>
-                  <p>udah deh gausah banyak basa basi chat ini itu, buruan dibeli keburu kehabisan karena ini barang sangat recommended dan limited edition. yokk lesgoo</p>
+                  {!! $product->description !!}
                 </div>
               </div>
             </div>
@@ -128,37 +131,27 @@
 @push('addon-script')
     <script src="/vendor/vue/vue.js"></script>
     <script>
-    var gallery = new Vue({
-        el: "#gallery",
-        mounted() {
-        AOS.init();
-        },
-        data: {
-        activePhoto: 0,
-        photos: [
-            {
-            id: 1,
-            url: "/images/product-details-4.jpg",
+        var gallery = new Vue({
+            el: "#gallery",
+            mounted() {
+            AOS.init();
             },
-            {
-            id: 2,
-            url: "/images/product-details-2.jpg",
+            data: {
+            activePhoto: 0,
+            photos: [
+                @foreach($product->galleries as $gallery)
+                    {
+                    id: {{ $gallery->id }},
+                    url: "{{ Storage::url($gallery->photos) }}",
+                    },
+                @endforeach
+                ],
             },
-            {
-            id: 3,
-            url: "/images/product-details-3.jpg",
+            methods: {
+            changeActive(id) {
+                this.activePhoto = id;
+                },
             },
-            {
-            id: 4,
-            url: "/images/product-details-5.jpg",
-            },
-        ],
-        },
-        methods: {
-        changeActive(id) {
-            this.activePhoto = id;
-        },
-        },
-    });
+        });
     </script>
 @endpush

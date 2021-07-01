@@ -125,7 +125,7 @@
     var register = new Vue({
         el: "#register",
         mounted() {
-        AOS.init();
+            AOS.init();
         },
         methods: {
             checkForEmailAvailability: function() {

@@ -74,7 +74,7 @@
                       </div>
                 </div>
                 <div class="row">
-                    <div class="col text-right">
+                    <div class="col text-right mb-3">
                         <button type="submit" class="btn btn-success px-5">
                             Save Now
                         </button>
