@@ -37,7 +37,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Pemilik Product</label>
+                                            <label>Owner Product</label>
                                             <select name="users_id" class="form-control">
                                                 @foreach ($users as $user)
                                                     <option value="{{ $user->id }}">{{ $user->name }}</option>
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Kategori Product</label>
+                                            <label>Category Product</label>
                                             <select name="categories_id" class="form-control">
                                                 @foreach ($categories as $category)
                                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -57,13 +57,13 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Harga Product</label>
+                                            <label>Product Price</label>
                                             <input type="number" name="price" class="form-control" required />
                                           </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Deskripsi Product</label>
+                                            <label>Product Description</label>
                                             <textarea name="description" id="editor"></textarea>
                                           </div>
                                     </div>

@@ -19,6 +19,13 @@
     .btn-signup {
       @include button-variant(#f3f3f3, transparent);
       color: #bbb;
+      border-radius: 24px;
+    }
+
+    .btn-success {
+      border-radius: 24px;
+      background-color: #f39189;
+      border: none;
     }
   }
 }

@@ -20,36 +20,53 @@ Route::get('/categories/{id}', 'CategoryController@detail')->name('categories-de
 Route::get('/details/{id}', 'DetailController@index')->name('detail');
 Route::post('/details/{id}', 'DetailController@add')->name('detail-add');
 
-Route::get('/cart', 'CartController@index')->name('cart');
-Route::delete('/cart/{id}', 'CartController@delete')->name('cart-delete');
 Route::get('/success', 'CartController@success')->name('success');
+
+Route::post('/checkout/callback', 'CheckoutController@callback')->name('qr-callback');
 
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register-success');
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::group(['middleware' => ['auth']], function() {
 
-// Dashboard Product
-Route::get('/dashboard/products', 'DashboardProductController@index')->name('dashboard-products');
-Route::get('/dashboard/products/{id}', 'DashboardProductController@detail')->name('dashboard-products-details');
-Route::get('/dashboard/products/create', 'DashboardProductController@create')->name('dashboard-products-create');
+    Route::get('/cart', 'CartController@index')->name('cart');
+    Route::delete('/cart/{id}', 'CartController@delete')->name('cart-delete');
 
-// Dashboard Transaction
-Route::get('/dashboard/transactions', 'DashboardTransactionController@index')->name('dashboard-transactions');
-Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@detail')->name('dashboard-transactions-details');
+    Route::post('/checkout', 'CheckoutController@process')->name('checkout');
 
-// Dashboard Setting
-Route::get('/dashboard/settings', 'DashboardSettingController@store')->name('dashboard-settings-store');
-Route::get('/dashboard/account', 'DashboardSettingController@account')->name('dashboard-settings-account');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
-// ->middleware(['auth', 'admin'])
+    // Dashboard Product
+    Route::get('/dashboard/products', 'DashboardProductController@index')->name('dashboard-products');
+    Route::get('/dashboard/products/create', 'DashboardProductController@create')->name('dashboard-products-create');
+    Route::post('/dashboard/products', 'DashboardProductController@store')->name('dashboard-products-store');
+    Route::get('/dashboard/products/{id}', 'DashboardProductController@details')->name('dashboard-products-details');
+    Route::post('/dashboard/products/{id}', 'DashboardProductController@update')->name('dashboard-products-update');
+
+    Route::post('/dashboard/products/gallery/upload', 'DashboardProductController@uploadGallery')->name('dashboard-products-gallery-upload');
+    Route::get('/dashboard/products/gallery/delete/{id}', 'DashboardProductController@deleteGallery')->name('dashboard-products-gallery-delete');
+
+    // Dashboard Transaction
+    Route::get('/dashboard/transactions', 'DashboardTransactionController@index')->name('dashboard-transactions');
+    Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@detail')->name('dashboard-transactions-details');
+    Route::post('/dashboard/transactions/{id}', 'DashboardTransactionController@update')->name('dashboard-transactions-update');
+
+    // Dashboard Setting
+    Route::get('/dashboard/settings', 'DashboardSettingController@store')->name('dashboard-settings-store');
+    Route::get('/dashboard/account', 'DashboardSettingController@account')->name('dashboard-settings-account');
+    Route::post('/dashboard/account/{redirect}', 'DashboardSettingController@update')->name('dashboard-settings-redirect');
+});
+
+
 Route::prefix('admin')
     ->namespace('Admin')
+    ->middleware(['auth', 'admin'])
     ->group(function() {
         Route::get('/', 'DashboardController@index')->name('admin-dashboard');
         Route::resource('category', 'CategoryController');
         Route::resource('user', 'UserController');
         Route::resource('product', 'ProductController');
         Route::resource('product-gallery', 'ProductGalleryController');
+        Route::resource('transaction', 'TransactionController');
     });
 
 Auth::routes();

@@ -28,9 +28,8 @@
         <!-- Desktop Menu -->
         <ul class="navbar-nav d-none d-lg-flex">
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
-              <img src="/images/profile.png" alt="" class="rounded-circle mr-2 profile-picture" />
-              Hi, Atik
+            <a href="#" class="nav-link d-inline-block mt-2" id="navbarDropdown" role="button" data-toggle="dropdown">
+                Hi, {{ Auth::user()->name }}
             </a>
             <div class="dropdown-menu">
               <a href="/dashboard.html" class="dropdown-item">Dashboard</a>
@@ -50,7 +49,7 @@
         <!-- Mobile -->
         <ul class="navbar-nav d-block d-lg-none">
           <li class="nav-item">
-            <a href="#" class="nav-link"> Hi, Atik </a>
+            <a href="#" class="nav-link"> Hi, {{ Auth::user()->name }} </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link d-inline-block"> Cart </a>

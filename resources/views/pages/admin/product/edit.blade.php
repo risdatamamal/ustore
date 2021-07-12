@@ -70,7 +70,7 @@
                 <div class="col-md-12">
                     <div class="form-group">
                         <label>Deskripsi Product</label>
-                        <textarea name="description" id="editor">{{!! $item->description !!}}</textarea>
+                        <textarea name="description" id="editor">{!! $item->description !!}</textarea>
                       </div>
                 </div>
                 <div class="row">

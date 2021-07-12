@@ -79,32 +79,34 @@
                 </div>
               </div>
               <div class="form-group" v-if="is_store_open">
-                <label>Nama toko</label>
-                <input type="text"
-                    class="form-control @error('store_name') is-invalid @enderror"
+                <label>Nama Toko</label>
+                <input
                     v-model="store_name"
                     id="store_name"
-                    style="border-radius: 24px"
+                    type="text"
+                    class="form-control @error('store_name') is-invalid @enderror"
                     name="store_name"
+                    value="{{ old('store_name') }}"
                     required
-                    autocomplete
-                    autofocus />
+                    autocomplete="store_name"
+                    autofocus
+                    style="border-radius: 24px">
 
-                @error('store_name')
+                @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
                 @enderror
-              </div>
-              <div class="form-group" v-if="is_store_open">
+            </div>
+            <div class="form-group" v-if="is_store_open">
                 <label>Kategori</label>
-                <select name="categories_id" class="form-control" style="border-radius: 24px">
-                  <option value="" disabled>Select Category</option>
-                  @foreach ($categories as $category)
-                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                  @endforeach
+                <select name="category" class="form-control" style="border-radius: 24px">
+                    <option value="" disabled>Select Category</option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                    @endforeach
                 </select>
-              </div>
+            </div>
               <button type="submit" class="btn btn-success btn-block mt-4" style="border-radius: 24px" :disabled="this.email_unavailable">Sign up now</button>
               <a href="{{ route('login') }}" class="btn btn-signup btn-block mt-2" style="border-radius: 24px">Back to sign in</a>
             </form>
@@ -165,8 +167,8 @@
         },
         data() {
             return {
-                name: "Mamat",
-                email: "mamat@gmail.com",
+                name: "",
+                email: "",
                 is_store_open: true,
                 store_name: "",
                 email_unavailable: false

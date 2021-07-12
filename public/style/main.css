@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10858,6 +10859,12 @@ footer p {
   }
 }
 
+.navbar-store .nav-item .sign-in {
+  border-radius: 24px;
+  background-color: #f39189;
+  border: none;
+}
+
 .navbar-store .profile-picture {
   max-height: 45px;
 }
@@ -10944,6 +10951,20 @@ footer p {
   margin-bottom: 10px;
 }
 
+.page-details .store-heading .btn-cart {
+  background-color: #f39189;
+  border-radius: 24px;
+  border: none;
+  padding: 10px 0px;
+  margin-left: -190px;
+  margin-top: 15px;
+}
+
+.page-details .store-heading .share-product {
+  margin-left: -200px;
+  margin-top: 60px;
+}
+
 .page-details .store-description {
   font-weight: normal;
   font-size: 16px;
@@ -10967,6 +10988,17 @@ footer p {
   font-weight: 500;
   font-size: 16px;
   color: #0c0d36;
+}
+
+.store-cart {
+  /*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
 }
 
 .store-cart h2 {
@@ -11003,42 +11035,74 @@ footer p {
 
 .store-cart .table-cart .btn-remove-cart {
   margin-top: 18px;
-  color: #fff;
-  background-color: #fc5e84;
-  border-color: transparent;
+  border-radius: 24px;
+  background-color: #bb8082;
+  color: #ffffff;
 }
 
-.store-cart .table-cart .btn-remove-cart:hover {
-  color: #fff;
-  background-color: #fb3867;
-  border-color: rgba(0, 0, 0, 0);
+.store-cart .btn-success {
+  background-color: #f39189;
+  border-radius: 24px;
+  border: none;
 }
 
-.store-cart .table-cart .btn-remove-cart:focus, .store-cart .table-cart .btn-remove-cart.focus {
-  color: #fff;
-  background-color: #fb3867;
-  border-color: rgba(0, 0, 0, 0);
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+.store-cart .modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: table;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
-.store-cart .table-cart .btn-remove-cart.disabled, .store-cart .table-cart .btn-remove-cart:disabled {
-  color: #fff;
-  background-color: #fc5e84;
-  border-color: transparent;
+.store-cart .modal-wrapper {
+  display: table-cell;
+  vertical-align: middle;
 }
 
-.store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled):active, .store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled).active,
-.show > .store-cart .table-cart .btn-remove-cart.dropdown-toggle {
-  color: #fff;
-  background-color: #fb2c5e;
-  border-color: rgba(0, 0, 0, 0);
+.store-cart .modal-container {
+  width: 300px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled):active:focus, .store-cart .table-cart .btn-remove-cart:not(:disabled):not(.disabled).active:focus,
-.show > .store-cart .table-cart .btn-remove-cart.dropdown-toggle:focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
+.store-cart .modal-header h3 {
+  margin-top: 0;
+  color: #0c0d36;
+  text-align: center;
+}
+
+.store-cart .modal-body {
+  margin: 20px 0;
+}
+
+.store-cart .modal-default-button {
+  float: right;
+}
+
+.store-cart .modal-enter {
+  opacity: 0;
+}
+
+.store-cart .modal-leave-active {
+  opacity: 0;
+}
+
+.store-cart .modal-enter .modal-container,
+.store-cart .modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .page-success .row-login {
@@ -11092,6 +11156,16 @@ footer p {
           box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
 }
 
+.page-success .section-success .btn-success {
+  background-color: #f39189;
+  border-radius: 24px;
+  border: none;
+}
+
+.page-success .section-success .btn-signup {
+  border-radius: 24px;
+}
+
 .page-auth .row-login {
   min-height: 70vh;
 }
@@ -11113,6 +11187,7 @@ footer p {
   background-color: #f3f3f3;
   border-color: transparent;
   color: #bbb;
+  border-radius: 24px;
 }
 
 .page-auth .section-store-auth .btn-signup:hover {
@@ -11146,6 +11221,12 @@ footer p {
 .show > .page-auth .section-store-auth .btn-signup.dropdown-toggle:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+
+.page-auth .section-store-auth .btn-success {
+  border-radius: 24px;
+  background-color: #f39189;
+  border: none;
 }
 
 .page-dashboard #page-content-wrapper {
@@ -11283,6 +11364,30 @@ footer p {
   position: absolute;
   top: -10px;
   right: 0;
+}
+
+.page-dashboard .section-content .btn-success {
+  border-radius: 24px;
+  background-color: #f39189;
+  border: none;
+}
+
+.store-sale-products h5 {
+  margin-top: 25px;
+}
+
+.store-sale-products .products-price {
+  text-decoration: line-through;
+  margin-left: 15px;
+}
+
+.store-sale-products .products-price-now {
+  color: #0c0d36;
+}
+
+.store-sale-products .products-sale {
+  color: #0c0d36;
+  margin-left: 8px;
 }
 
 .component-categories {
