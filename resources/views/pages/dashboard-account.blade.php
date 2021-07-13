@@ -34,13 +34,13 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="addressOne">Address 1</label>
+                                <label for="address_one">Address 1</label>
                                 <input type="text" class="form-control" id="address_one" name="address_one" value="{{ $user->address_one }}" style="border-radius: 24px" />
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="addressTwo">Address 2</label>
+                                <label for="address_two">Address 2</label>
                                 <input type="text" class="form-control" id="address_two" name="address_two" value="{{ $user->address_two }}" style="border-radius: 24px" />
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="phone_number">Mobile</label>
+                                <label for="phone_number">Phone number</label>
                                 <input type="text" class="form-control" id="phone_number" name="phone_number" value="{{ $user->phone_number }}" style="border-radius: 24px" />
                             </div>
                         </div>

@@ -101,7 +101,7 @@
             <div class="form-group" v-if="is_store_open">
                 <label>Kategori</label>
                 <select name="categories_id" class="form-control" style="border-radius: 24px">
-                    <option value="" disabled>Select Category</option>
+                    <option value="Select Category" disabled>Select Category</option>
                     @foreach ($categories as $category)
                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach

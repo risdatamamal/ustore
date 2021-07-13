@@ -42,6 +42,6 @@ class DashboardTransactionController extends Controller
 
         $item->update($data);
 
-        return redirect()->route('dashboard-transaction-details', $id);
+        return redirect()->route('dashboard-transactions-details', $id);
     }
 }

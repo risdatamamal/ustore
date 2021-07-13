@@ -96,13 +96,13 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="address_one">Address 1</label>
-                        <input type="text" class="form-control" id="address_one" name="address_one" style="border-radius: 24px;" />
+                        <input type="text" class="form-control" id="address_one" name="address_one" style="border-radius: 24px;" value="{{ $user->address_one }}"/>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="address_two">Address 2</label>
-                        <input type="text" class="form-control" id="address_two" name="address_two" style="border-radius: 24px;" />
+                        <input type="text" class="form-control" id="address_two" name="address_two" style="border-radius: 24px;" value="{{ $user->address_two }}" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -126,19 +126,19 @@
                     <div class="col-md-4">
                       <div class="form-group">
                         <label for="zip_code">Postal Code</label>
-                        <input type="text" class="form-control" id="zip_code" name="zip_code" style="border-radius: 24px;" />
+                        <input type="text" class="form-control" id="zip_code" name="zip_code" style="border-radius: 24px;" value="{{ $user->zip_code }}" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="country">Country</label>
-                        <input type="text" class="form-control" id="country" name="country" style="border-radius: 24px;" />
+                        <input type="text" class="form-control" id="country" name="country" style="border-radius: 24px;" value="{{ $user->country }}" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="phone_number">Phone number</label>
-                        <input type="text" class="form-control" id="phone_number" name="phone_number" style="border-radius: 24px;" />
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" style="border-radius: 24px;" value="{{ $user->phone_number }}" />
                       </div>
                     </div>
                   </div>
@@ -164,7 +164,7 @@
                       <div class="product-subtitle">Ship to Destination</div>
                     </div>
                     <div class="col-4 col-md-2">
-                      <div class="product-title text-success">Rp {{ number_format($totalPrice ?? 0) }}</div>
+                      <div class="product-title text-success">Rp {{ number_format($totalPrice + 30000 ?? 0) }}</div>
                       <div class="product-subtitle">Total</div>
                     </div>
                     <div class="col-8 col-md-3">

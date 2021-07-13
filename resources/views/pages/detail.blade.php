@@ -62,10 +62,10 @@
                     @auth
                         <form action="{{ route('detail-add', $product->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <button type="submit" class="btn btn-success px-4 text-white btn-block mb-3" style="border-radius: 24px">Add to cart</button>
+                            <button type="submit" class="btn btn-cart px-4 text-white btn-block mb-3" >Add to cart</button>
                         </form>
                     @else
-                        <a href="{{ route('login') }}" class="btn btn-success px-4 text-white btn-block mb-3" style="border-radius: 24px">Sign in to Add</a>
+                        <a href="{{ route('login') }}" class="btn btn-cart px-4 text-white btn-block mb-3">Sign in to Add</a>
                     @endauth
                 </div>
               </div>

@@ -82,7 +82,8 @@
                                     background-image: url('{{ Storage::url($product->galleries->first()->photos) }}')
                                 @else
                                     background-color: #eee
-                                @endif"></div>
+                                @endif">
+                                </div>
                             </div>
                             <div class="products-text">{{ $product->name }}</div>
                             <div class="products-price">Rp {{ number_format($product->price) }}</div>

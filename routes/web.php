@@ -21,7 +21,9 @@ Route::get('/details/{id}', 'DetailController@index')->name('detail');
 Route::post('/details/{id}', 'DetailController@add')->name('detail-add');
 
 Route::get('/success', 'CartController@success')->name('success');
-Route::post('/checkout/callback', 'CheckoutController@callback')->name('qr-callback');
+Route::post('/checkout/callback', 'CheckoutController@callback')->name('payment-callback');
+Route::get('/checkout/payment', 'CheckoutController@payment')->name('payment');
+
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register-success');
 
 Route::group(['middleware' => ['auth']], function() {
@@ -45,7 +47,7 @@ Route::group(['middleware' => ['auth']], function() {
 
     // Dashboard Transaction
     Route::get('/dashboard/transactions', 'DashboardTransactionController@index')->name('dashboard-transactions');
-    Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@detail')->name('dashboard-transactions-details');
+    Route::get('/dashboard/transactions/{id}', 'DashboardTransactionController@details')->name('dashboard-transactions-details');
     Route::post('/dashboard/transactions/{id}', 'DashboardTransactionController@update')->name('dashboard-transactions-update');
 
     // Dashboard Setting
@@ -68,7 +70,3 @@ Route::prefix('admin')
     });
 
 Auth::routes();
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
