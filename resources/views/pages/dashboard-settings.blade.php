@@ -23,13 +23,13 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Nama toko</label>
-											<input type="text" class="form-control" name="store_name" value="{{ $user->store_name }}" />
+											<input type="text" class="form-control" name="store_name" value="{{ $user->store_name }}" style="border-radius: 24px" />
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 											<label>Kategori</label>
-											<select name="categories_id" class="form-control">
+											<select name="categories_id" class="form-control" style="border-radius: 24px">
                                                 <option value="{{ $user->categories_id }}">Tidak diganti</option>
                                                 @foreach ($categories as $categories)
                                                   <option value="{{ $categories->id }}">{{ $categories->name }}</option>
@@ -41,7 +41,7 @@
                                         <div class="form-group">
                                           <label>Store</label>
                                           <p class="text-muted">
-                                            Apakah anda juga ingin membuka toko?
+                                            Apakah anda juga ingin menutup toko?
                                           </p>
                                           <div
                                             class="custom-control custom-radio custom-control-inline"

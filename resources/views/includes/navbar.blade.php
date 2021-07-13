@@ -25,7 +25,7 @@
                             <a href="{{ route('register') }}" class="nav-link">Sign up</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('login') }}" class="btn btn-success nav-link px-4 text-white" style="border-radius: 24px">Sign in</a>
+                            <a href="{{ route('login') }}" class="btn sign-in nav-link px-4 text-white" style="border-radius: 24px">Sign in</a>
                         </li>
                     @endguest
                 </ul>

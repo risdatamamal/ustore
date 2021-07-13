@@ -96,19 +96,19 @@
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="address_one">Address 1</label>
-                        <input type="text" class="form-control" id="address_one" name="address_one" />
+                        <input type="text" class="form-control" id="address_one" name="address_one" style="border-radius: 24px;" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="address_two">Address 2</label>
-                        <input type="text" class="form-control" id="address_two" name="address_two" />
+                        <input type="text" class="form-control" id="address_two" name="address_two" style="border-radius: 24px;" />
                       </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                           <label for="provinces_id">Province</label>
-                          <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces">
+                          <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces" style="border-radius: 24px;">
                             <option v-for="province in provinces" :value="province.id">@{{ province.name }}</option>
                           </select>
                           <select v-else class="form-control"></select>
@@ -117,7 +117,7 @@
                       <div class="col-md-4">
                         <div class="form-group">
                           <label for="regencies_id">City</label>
-                          <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
+                          <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies" style="border-radius: 24px;">
                             <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
                           </select>
                           <select v-else class="form-control"></select>
@@ -126,19 +126,19 @@
                     <div class="col-md-4">
                       <div class="form-group">
                         <label for="zip_code">Postal Code</label>
-                        <input type="text" class="form-control" id="zip_code" name="zip_code" />
+                        <input type="text" class="form-control" id="zip_code" name="zip_code" style="border-radius: 24px;" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="country">Country</label>
-                        <input type="text" class="form-control" id="country" name="country" />
+                        <input type="text" class="form-control" id="country" name="country" style="border-radius: 24px;" />
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
                         <label for="phone_number">Phone number</label>
-                        <input type="text" class="form-control" id="phone_number" name="phone_number" />
+                        <input type="text" class="form-control" id="phone_number" name="phone_number" style="border-radius: 24px;" />
                       </div>
                     </div>
                   </div>
