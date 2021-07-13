@@ -106,23 +106,23 @@
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="provinces_id">Province</label>
-                        <select name="provinces_id" id="provinces_id" class="form-control" v-if="provinces" v-model="provinces_id">
-                            <option v-for="province in provinces" :value="province.id">@{{ province.name  }}</option>
-                        </select>
-                        <select v-else class="form-control"></select>
+                        <div class="form-group">
+                          <label for="provinces_id">Province</label>
+                          <select name="provinces_id" id="provinces_id" class="form-control" v-model="provinces_id" v-if="provinces">
+                            <option v-for="province in provinces" :value="province.id">@{{ province.name }}</option>
+                          </select>
+                          <select v-else class="form-control"></select>
+                        </div>
                       </div>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="form-group">
-                        <label for="regencies_id">City</label>
-                        <select name="regencies_id" id="regencies_id" class="form-control" v-if="regencies" v-model="regencies_id" >
-                            <option v-for="regency in regencies" :value="regency.id">@{{ regency.name }}</option>
-                        </select>
-                        <select v-else class="form-control"></select>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                          <label for="regencies_id">City</label>
+                          <select name="regencies_id" id="regencies_id" class="form-control" v-model="regencies_id" v-if="regencies">
+                            <option v-for="regency in regencies" :value="regency.id">@{{regency.name }}</option>
+                          </select>
+                          <select v-else class="form-control"></select>
+                        </div>
                       </div>
-                    </div>
                     <div class="col-md-4">
                       <div class="form-group">
                         <label for="zip_code">Postal Code</label>
@@ -152,16 +152,16 @@
                   </div>
                   <div class="row" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-4 col-md-2">
-                      <div class="product-title">$10</div>
+                      <div class="product-title">Rp 1000</div>
                       <div class="product-subtitle">Country Tax</div>
                     </div>
                     <div class="col-4 col-md-3">
-                      <div class="product-title">$10</div>
+                      <div class="product-title">Rp 10000</div>
                       <div class="product-subtitle">Product Insurance</div>
                     </div>
                     <div class="col-4 col-md-2">
-                      <div class="product-title">$10</div>
-                      <div class="product-subtitle">Ship to Tangerang</div>
+                      <div class="product-title">Rp 10000</div>
+                      <div class="product-subtitle">Ship to Destination</div>
                     </div>
                     <div class="col-4 col-md-2">
                       <div class="product-title text-success">Rp {{ number_format($totalPrice ?? 0) }}</div>

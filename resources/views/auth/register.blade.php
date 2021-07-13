@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row align-items-center justify-content-center row-login">
           <div class="col-lg-4">
-            <h2>Memulai untuk jual beli <br /> dengan cara terbaru</h2>
+            <h2 class="text-center">Memulai untuk jual beli <br /> dengan cara terbaru</h2>
             <form method="POST" action="{{ route('register') }}">
                 @csrf
               <div class="form-group">
@@ -108,7 +108,7 @@
                 </select>
             </div>
               <button type="submit" class="btn btn-success btn-block mt-4" style="border-radius: 24px" :disabled="this.email_unavailable">Sign up now</button>
-              <a href="{{ route('login') }}" class="btn btn-signup btn-block mt-2" style="border-radius: 24px">Back to sign in</a>
+              <a href="{{ route('login') }}" class="btn btn-signup btn-block mt-2" style="border-radius: 24px">Back to Sign In</a>
             </form>
           </div>
         </div>

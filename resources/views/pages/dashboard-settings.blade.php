@@ -38,19 +38,49 @@
 										</div>
 									</div>
 									<div class="col-md-6">
-										<div class="form-group">
-											<label>Store</label>
-											<p class="text-muted">Apakah anda juga ingin membuka toko?</p>
-											<div class="custom-control custom-radio custom-control-inline">
-												<input type="radio" class="custom-control-input" name="store_status" id="openStoreTrue" value="1" {{ $user->store_status == 1 ? 'checked' : '' }} />
-												<label for="openStoreTrue" class="custom-control-label">Buka</label>
-											</div>
-											<div class="custom-control custom-radio custom-control-inline">
-												<input type="radio" class="custom-control-input" name="is_store_open" id="openStoreFalse" value="0" {{ $user->store_status == 0 || $user->store_status == NULL  ? 'checked' : '' }} />
-												<label for="openStoreFalse" class="custom-control-label">Sementara tutup</label>
-											</div>
-										</div>
-									</div>
+                                        <div class="form-group">
+                                          <label>Store</label>
+                                          <p class="text-muted">
+                                            Apakah anda juga ingin membuka toko?
+                                          </p>
+                                          <div
+                                            class="custom-control custom-radio custom-control-inline"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="store_status"
+                                              id="openStoreTrue"
+                                              value="1"
+                                              {{ $user->store_status == 1 ? 'checked' : '' }}
+                                            />
+                                            <label
+                                              for="openStoreTrue"
+                                              class="custom-control-label"
+                                            >
+                                              Buka
+                                            </label>
+                                          </div>
+                                          <div
+                                            class="custom-control custom-radio custom-control-inline"
+                                          >
+                                            <input
+                                              type="radio"
+                                              class="custom-control-input"
+                                              name="store_status"
+                                              id="openStoreFalse"
+                                              value="0"
+                                              {{ $user->store_status == 0 || $user->store_status == NULL ? 'checked' : '' }}
+                                            />
+                                            <label
+                                              for="openStoreFalse"
+                                              class="custom-control-label"
+                                            >
+                                              Sementara Tutup
+                                            </label>
+                                          </div>
+                                        </div>
+                                      </div>
 								</div>
 								<!-- Button -->
 								<div class="row">

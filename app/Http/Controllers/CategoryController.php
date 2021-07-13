@@ -14,10 +14,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index(Request $request)
     {
         $categories = Category::all();
-        $products = Product::with(['galleries'])->paginate(16);
+        $products = Product::paginate($request->input('limit', 12));
 
         return view('pages.category', [
             'categories' => $categories,
@@ -34,10 +34,11 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         $category = Category::where('slug', $slug)->firstOrFail();
-        $products = Product::with(['galleries'])->where('categories_id', $category->id)->paginate(16);
+        $products = Product::where('categories_id', $category->id)->paginate($request->input('limit', 12));
 
-        return view('pages.category', [
+        return view('pages.category',[
             'categories' => $categories,
+            'category' => $category,
             'products' => $products
         ]);
     }

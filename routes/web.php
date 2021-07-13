@@ -21,9 +21,7 @@ Route::get('/details/{id}', 'DetailController@index')->name('detail');
 Route::post('/details/{id}', 'DetailController@add')->name('detail-add');
 
 Route::get('/success', 'CartController@success')->name('success');
-
 Route::post('/checkout/callback', 'CheckoutController@callback')->name('qr-callback');
-
 Route::get('/register/success', 'Auth\RegisterController@success')->name('register-success');
 
 Route::group(['middleware' => ['auth']], function() {

@@ -17,7 +17,7 @@
                 <h2>Transaction processed</h2>
                 <p>Silahkan tunggu konfirmasi email dari kami dan kami akan menginformasikan resi secepat mungkin!</p>
                 <div>
-                  <a href="/dashboard.html" class="btn btn-success w-50 mt-4">My Dashboard</a>
+                  <a href="{{ route('dashboard') }}" class="btn btn-success w-50 mt-4">My Dashboard</a>
                   <a href="{{ route('home') }}" class="btn btn-signup w-50 mt-2">Go To Shopping</a>
                 </div>
               </div>

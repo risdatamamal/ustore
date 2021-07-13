@@ -20,7 +20,7 @@
                     bersama kami. Let's grow up now.
                 </p>
                 <div>
-                  <a href="/dashboard.html" class="btn btn-success w-50 mt-4">My Dashboard</a>
+                  <a href="{{ route('dashboard') }}" class="btn btn-success w-50 mt-4">My Dashboard</a>
                   <a href="{{ route('home') }}" class="btn btn-signup w-50 mt-2">Go To Shopping</a>
                 </div>
               </div>
