@@ -124,6 +124,7 @@
                     <button
                       type="button"
                       class="btn btn-secondary btn-block mt-3"
+                      style="border-radius: 24px"
                       onclick="thisFileUpload()"
                     >
                       Add Photo

@@ -22,7 +22,7 @@
                             padding: 300px -90px;">
                                 <h3 class="text-scan py-3 text-white">Scan Here <br> for Payment</h3>
                                 <div class="visible-print text-center">
-                                    {!! QrCode::size(200)->format('svg')->color(243, 145, 137)->eye('circle')->style('round')->generate('Aku Cinta Kamu'); !!}
+                                    {!! QrCode::size(200)->format('svg')->color(243, 145, 137)->eye('circle')->style('round')->generate('http://backend-store.test'); !!}
                                 </div>
                                 <div id="countdown" class="countdown mt-4 text-white">
                                 </div>
