@@ -14,33 +14,47 @@
 
 
 
-### Installation Project
+## How to Setup a Laravel Project You Cloned from Github.com
 
-How to installation project with Laravel 8 and Vue
-
-Install project with:
-
+1. Clone GitHub repo for this project locally
 ```markdown
 
+git clone https://github.com/risdatamamal/englishlearner-backend.git ustore
+
+```
+
+2. After Clone Github repo, cd into your project. And then Install Composer Dependencies and NPM Dependencies
+```markdown
 composer install
 
 composer update
 
 npm install && npm run dev
+```
+
+3. Create a copy of your .env file
+```markdown
+
+cp .env.example .env
 
 ```
 
+4. Generate an app encryption key
+```markdown
 
-## About Laravel
+php artisan key:generate
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+5. Create an empty database SQL for our application in MYSQL or PostgresSQL or anything about SQL
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+6. In the .env file, add database information to allow Laravel to connect to the database
+```css
+In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_PASSWORD options to match the credentials of the database you just created. This will allow us to run migrations and seed the database in the next step.
+```
+7. Migrate the database
+```markdown
+
+php artisan migrate
+
+```
