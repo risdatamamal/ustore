@@ -19,7 +19,7 @@
 1. Clone GitHub repo for this project locally
 ```markdown
 
-git clone https://github.com/risdatamamal/englishlearner-backend.git ustore
+git clone https://github.com/risdatamamal/ustore.git ustore
 
 ```
 
