@@ -19,4 +19,4 @@ jobs:
         server: ${{ secrets.SERVER }}
         username: ${{ secrets.SERVER_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: ${{ secrets.SERVER_DIR_ENGLISHLEARNER }}
+        server-dir: ${{ secrets.SERVER_DIR_USTORE }}
