@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Cart;
-use App\Transaction;
-use App\TransactionDetail;
+use App\Models\Cart;
+use App\Models\Transaction;
+use App\Models\TransactionDetail;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

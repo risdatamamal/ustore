@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use App\Category;
+use App\Models\User;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Store;
 use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
@@ -78,18 +79,33 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \App\Models\User
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'store_name' => isset($data['store_name']) ? $data['store_name'] : '',
-            'categories_id' => isset($data['categories_id']) ? $data['categories_id'] : NULL,
-            'store_status' => $data['is_store_open'] ? 1 : 0
         ]);
+
+        if ($user) {
+            if ($data['is_store_open'] == 1) {
+                Store::create([
+                    'user_id' => $user->id,
+                    'store_name' => $data['store_name'],
+                    'categories_id' => $data['categories_id'],
+                    'store_status' => $data['is_store_open'] ? 1 : 0
+                ]);
+            } else {
+                Store::create([
+                    'user_id' => $user->id,
+                    'store_status' => $data['is_store_open'] ? 1 : 0
+                ]);
+            }
+
+            return $user;
+        }
     }
 
     public function success()

@@ -71,7 +71,7 @@
                     <li class="nav-item">
                         <a href="{{ route('cart') }}" class="nav-link mt-2">
                             @php
-                                $carts = \App\Cart::where('users_id', Auth::user()->id)->count();
+                                $carts = \App\Models\Cart::where('users_id', Auth::user()->id)->count();
                             @endphp
                             @if ($carts > 0)
                                 <img src="/images/icon-cart-filled.svg" alt="" />

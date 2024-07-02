@@ -6,10 +6,10 @@ use App\Http\Requests\Admin\ProductGalleryRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 
-use App\Category;
-use App\Product;
-use App\ProductGallery;
-use App\User;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\ProductGallery;
+use App\Models\User;
 use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Facades\DataTables;
 

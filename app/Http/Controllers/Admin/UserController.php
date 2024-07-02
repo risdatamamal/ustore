@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-use App\User;
+use App\Models\User;
 
 use App\Http\Requests\Admin\UserRequest;
 use Illuminate\Support\Str;

@@ -6,9 +6,9 @@ use App\Http\Requests\Admin\ProductRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 
-use App\Category;
-use App\Product;
-use App\User;
+use App\Models\Category;
+use App\Models\Product;
+use App\Models\User;
 
 use Yajra\DataTables\Facades\DataTables;
 
